@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 export default function Navbar() {
   useEffect(() => {
     const navbar = document.querySelector(".rn-header");
@@ -71,11 +72,11 @@ export default function Navbar() {
             </nav>
             {/* Start Header Right  */}
             <div className="header-right">
-            <Link to="/upload">
+            <Link to="/">
               <a className="rn-btn" target="_blank" href="Upload.html">
-                <span>Try Me!</span>
+                <span>Home!</span>
               </a>
-            </Link>
+              </Link>
               <div className="hamberger-menu d-block d-xl-none">
                 <i id="menuBtn" className="feather-menu humberger-menu" />
               </div>

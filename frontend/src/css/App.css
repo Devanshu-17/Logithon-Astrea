@@ -449,6 +449,8 @@ html {
 
 body {
     font-size: var(--font-size-b1);
+    height: 100vh;
+    background-color: #191925;
     line-height: var(--line-height-b1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

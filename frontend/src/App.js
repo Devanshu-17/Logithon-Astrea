@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/App.css";
+
 import "./css/bootstrap.min.css";
 import indexImage from "./images/preview/index-1.png";
 import indexImage2 from "./images/preview/index-2.png";
@@ -201,16 +201,17 @@ function App() {
                           {/* type headline start*/}
                           <span className="cd-headline clip is-full-width"></span>
                           <div className="nav-btn mt--39">
+                          <Link to="/Upload">
                             <a
                               className="rn-btn"
                               target="_blank"
                               href="Upload.html"
                             >
-                            <Link to="/Upload">
-                              <a className="rn-btn" to="/Upload">
+                            
+                              <a className="rn-btn" to="/">
                                 <span>Get Started</span>
                               </a>
-                              </Link>
+                              
                               {/* <span>Get Started</span> */}
                               {/* <Router>
                                 <div>
@@ -219,6 +220,7 @@ function App() {
                               {/* </div> */}
                               {/* </Router> */}
                             </a>
+                            </Link>
                           </div>
                           {/* type headline end */}
                         </span>
