@@ -1,10 +1,6 @@
 import React from "react";
 import "./css/App.css";
-import "./css/aos.css";
 import "./css/bootstrap.min.css";
-import "./css/feather.css";
-import "./css/slick.css";
-import "./css/slick.theme.css";
 import indexImage from "./images/preview/index-1.png";
 import indexImage2 from "./images/preview/index-2.png";
 import indexImage3 from "./images/preview/index-3.png";
@@ -19,7 +15,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./Navbar.js";
 import Footer from "./Footer.js"
 import { TypeAnimation } from "react-type-animation";
-// import Upload from "./Upload.js";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -210,9 +206,11 @@ function App() {
                               target="_blank"
                               href="Upload.html"
                             >
+                            <Link to="/Upload">
                               <a className="rn-btn" to="/Upload">
                                 <span>Get Started</span>
                               </a>
+                              </Link>
                               {/* <span>Get Started</span> */}
                               {/* <Router>
                                 <div>
