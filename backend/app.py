@@ -103,6 +103,56 @@ async def process_invoice_data(invoice_file: UploadFile = File(...)):
 
     return cleaned_json
 
+from pydantic import BaseModel
+from typing import Dict, Any
+
+class FeedbackData(BaseModel):
+    feedback: str
+    data: str
+
+def process_feedback_and_data(feedback: str, data: Dict[str, Any]) -> Dict[str, Any]:
+    # Example: If feedback suggests adding a new field, add it to the data
+    if "add new field" in feedback:
+        data["new_field"] = "example value"
+    # Add more processing logic as needed
+    return data
+
+from fastapi import FastAPI, Body
+
+from fastapi import FastAPI, Body
+import json
+
+@app.post("/process_feedback")
+async def process_feedback(feedback_data: FeedbackData):
+    feedback = feedback_data.feedback
+    print("Feedback:", feedback)
+    data_str = feedback_data.data # This is now a string
+    print("Data String:", data_str)
+    data = json.loads(data_str) # Parse the string back into a JSON object
+    print("Data:", data)
+
+    # Send request to Groq Llama model for further processing
+    response = groq_client.chat.completions.create(
+        messages=[
+            {"role": "system", "content": f"Based on the feedback '{feedback}', improve the {data} by making the necessary changes. Return the improved data as a JSON object."},
+        ],
+        model="llama3-8b-8192",
+    )
+    improved_response_content = response.choices[0].message.content
+    print("Improved Response Content:", improved_response_content)
+
+    json_start_index = improved_response_content.find("{")
+    json_end_index = improved_response_content.rfind("}")
+    data = json.loads(improved_response_content[json_start_index:json_end_index + 1])
+
+    cleaned_improved_response_content = remove_na_values(data)
+    cleaned_json = json.dumps(cleaned_improved_response_content, indent=2)
+    print("Cleaned JSON:", cleaned_json)
+
+    return cleaned_json
+
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -5,6 +5,8 @@ import "./css/output.css";
 
 function Output() {
   const [data, setData] = useState({});
+  const [showFeedbackBox, setShowFeedbackBox] = useState(false);
+  const [feedback, setFeedback] = useState("");
 
   useEffect(() => {
     const storedData = sessionStorage.getItem('uploadData');
@@ -29,6 +31,38 @@ function Output() {
       console.error("Invalid JSON entered in the textarea.");
     }
   };
+
+  // Function to handle like button click
+  const handleLikeClick = () => {
+    alert("Thanks for your feedback!");
+  };
+
+  // Function to handle dislike button click
+  const handleDislikeClick = () => {
+    setShowFeedbackBox(true);
+  };
+
+  const handleFeedbackSubmit = async (event) => {
+    event.preventDefault();
+    // Send feedback and JSON data to the backend
+    const response = await fetch('http://localhost:8000/process_feedback', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            feedback: feedback,
+            data: JSON.stringify(data), // Convert data to a string
+        }),
+    });
+
+    if (response.ok) {
+        const improvedData = await response.json();
+        setData(improvedData); // Update the state with the improved data
+    } else {
+        console.error('Error submitting feedback and data');
+    }
+};
 
 
   // Function to download data as JSON
@@ -62,6 +96,32 @@ function Output() {
             onChange={handleTextareaChange} // Handle changes to the textarea
           />
         </div>
+        <div className="button-container">
+          <button onClick={handleLikeClick}>Like</button>
+          <button onClick={handleDislikeClick}>Dislike</button>
+        </div>
+        {showFeedbackBox && (
+          <div className="feedback-container">
+            <form onSubmit={handleFeedbackSubmit}>
+              <textarea
+                rows={4} // Adjust rows as needed
+                cols={50} // Adjust cols as needed
+                value={feedback}
+                onChange={(e) => setFeedback(e.target.value)}
+                placeholder="Enter your feedback here..."
+              />
+              <button type="submit">Submit Feedback</button>
+            </form>
+            <textarea
+                className="glowing-textarea"
+                rows={10} // Adjust rows as needed
+                cols={50} // Adjust cols as needed
+                value={JSON.stringify(data, null, 2)} // Convert data to a string
+                onChange={handleTextareaChange} // Handle changes to the textarea
+            />
+
+          </div>
+        )}
         <div className="button-container">
           <button onClick={downloadAsJSON}>Download as JSON</button>
         </div>
