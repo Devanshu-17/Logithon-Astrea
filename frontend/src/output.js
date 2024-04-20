@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar_upload';
 import "./css/output.css";
+import "./css/bootstrap.min.css";
+import {ReactComponent as ThumbsUp} from './images/svg/thumbs-up.svg';
+import { ReactComponent as Thumbsdown } from "./images/svg/thumbs-down.svg";
+import previewBg from "./images/preview/Bug_Loader.gif";
+
 
 function Output() {
   const [data, setData] = useState({});
@@ -31,6 +36,7 @@ function Output() {
       console.error("Invalid JSON entered in the textarea.");
     }
   };
+
 
   // Function to handle like button click
   const handleLikeClick = () => {
@@ -79,6 +85,20 @@ function Output() {
 
   return (
     <div className="container">
+      {/* <img
+        src={previewBg}
+        style={{
+          position: "fixed",
+          top: "-200px",
+          width: "100%",
+          height: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          opacity: "0.1",
+          zIndex: "1000"
+        }}
+      /> */}
       <Navbar />
       <div className="content-container">
         <br />
@@ -86,6 +106,7 @@ function Output() {
         <br />
         <br />
         <br />
+        
         <h2>Parsed Data</h2>
         <div className="textbox-container">
           <textarea
@@ -97,8 +118,8 @@ function Output() {
           />
         </div>
         <div className="button-container">
-          <button onClick={handleLikeClick}>Like</button>
-          <button onClick={handleDislikeClick}>Dislike</button>
+          <button onClick={handleLikeClick}><ThumbsUp /></button>
+          <button onClick={handleDislikeClick}><Thumbsdown /></button>
         </div>
         {showFeedbackBox && (
           <div className="feedback-container">
@@ -110,7 +131,9 @@ function Output() {
                 onChange={(e) => setFeedback(e.target.value)}
                 placeholder="Enter your feedback here..."
               />
-              <button type="submit">Submit Feedback</button>
+              <div className='button-container'>
+              <button type="submit" className='submit-feedback'>Submit Feedback</button>
+              </div>
             </form>
             <textarea
                 className="glowing-textarea"
@@ -123,7 +146,7 @@ function Output() {
           </div>
         )}
         <div className="button-container">
-          <button onClick={downloadAsJSON}>Download as JSON</button>
+          <button onClick={downloadAsJSON} className='rn-btn'>Download as JSON</button>
         </div>
       </div>
       <Footer />
