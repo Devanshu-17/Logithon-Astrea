@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./css/bootstrap.min.css";
-import indexImage from "./images/preview/index-1.png";
-import indexImage2 from "./images/preview/index-2.png";
-import indexImage3 from "./images/preview/index-3.png";
+import indexImage from "./images/home.png";
+import indexImage2 from "./images/main.png";
+import indexImage3 from "./images/output.png";
 import previewBg from "./images/preview/Bug_Loader.gif";
 import logo from "./images/logo/logo.png";
 import { ReactComponent as ActivityIcon } from "./images/svg/activity.svg";
@@ -50,7 +50,7 @@ function App() {
               <div className="menu-header">
                 <a className="logo" href="../../public/index.html">
                   <span style={{ color: "white", fontSize: "x-large" }}>
-                    LoGiThon
+                    Astrea
                   </span>
                 </a>
                 <div className="close-button">
@@ -172,9 +172,10 @@ function App() {
                   <div className="col-lg-12">
                     <div className="inner-content">
                       <h1 className="title mt--60">
-                        Smart PDF To <br />
-                        Data Coverter
+                      Astral Extraction
                         <br />
+                        Doc Parsing                          Made Simple
+                          <br />
                         <TypeAnimation
                           sequence={[
                             "UPLOAD",
@@ -238,10 +239,9 @@ function App() {
                             <ActivityIcon />
                           </div>
                           <div className="content">
-                            <h4 className="title">Fast Performance</h4>
+                            <h4 className="title">Automated Invoice Data Processing</h4>
                             <p className="description">
-                              Optimized for a smaller build size, faster dev
-                              compilation and dozens of other improvements.
+                            Efficiently extract and process invoice data having faster processing times and improved accuracy.
                             </p>
                           </div>
                         </div>
@@ -256,10 +256,9 @@ function App() {
                             <SmartPhone />
                           </div>
                           <div className="content">
-                            <h4 className="title">Perfect Responsive</h4>
+                            <h4 className="title">Intelligent Feedback Integration</h4>
                             <p className="description">
-                              Our Template is full Perfect for all device. You
-                              can visit our template all device easily.
+                            Seamlessly integrate user feedback to refine and enhance data extraction algorithms. 
                             </p>
                           </div>
                         </div>
@@ -275,11 +274,10 @@ function App() {
                           </div>
                           <div className="content">
                             <h4 className="title">
-                              Fast &amp; Friendly Support
+                            Seamless Integration with Open Source LLMs
                             </h4>
                             <p className="description">
-                              We are provide 24 hours support for all
-                              clients.You can purchase without hesitation.
+                            Experience the flexibility and power of open-source LLM integration with ease.
                             </p>
                           </div>
                         </div>
@@ -317,14 +315,14 @@ function App() {
                         src={indexImage}
                         alt="NFT Images"
                       />
-                      <a target="_blank" href="" className="preview-btn">
+                      {/* <a target="_blank" href="" className="preview-btn">
                         <span className="rn-btn">Live Preview</span>
-                      </a>
+                      </a> */}
                     </div>
                     <div className="content">
                       <h3 className="title">
                         <a href="">
-                          Demo One
+                          Home
                           <i className="feather feather-arrow-up-right" />
                         </a>
                       </h3>
@@ -341,14 +339,14 @@ function App() {
                         src={indexImage2}
                         alt="NFT Images"
                       />
-                      <a target="_blank" href="" className="preview-btn">
+                      {/* <a target="_blank" href="" className="preview-btn">
                         <span className="rn-btn">Live Preview</span>
-                      </a>
+                      </a> */}
                     </div>
                     <div className="content">
                       <h3 className="title">
                         <a href="">
-                          Demo Two
+                          Data Ingestion
                           <i className="feather-arrow-up-right" />
                         </a>
                       </h3>
@@ -365,413 +363,20 @@ function App() {
                         src={indexImage3}
                         alt="NFT Images"
                       />
-                      <a target="_blank" href="" className="preview-btn">
+                      {/* <a target="_blank" href="" className="preview-btn">
                         <span className="rn-btn">Live Preview</span>
-                      </a>
+                      </a> */}
                     </div>
                     <div className="content">
                       <h3 className="title">
                         <a href="">
-                          Demo Three
+                          Extracted Data
                           <i className="feather-arrow-up-right" />
                         </a>
                       </h3>
                     </div>
                   </div>
                 </div>
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12"> */}
-                {/* <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-4.png"
-                alt="NFT Images"
-              />
-              <a target="_blank" href="" class="preview-btn">
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href=""
-                  >Demo Four<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div> */}
-                {/* </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-5.png"
-                alt="NFT Images"
-              />
-              <a target="_blank" href="" class="preview-btn">
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href=""
-                  >Demo Five<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-6.png"
-                alt="NFT Images"
-              />
-              <a target="_blank" href="" class="preview-btn">
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href=""
-                  >Demo Six<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div> */}
-                {/* </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-7.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-07"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-07"
-                  >Demo Seven<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-8.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-08"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-08"
-                  >Demo Eight<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-9.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-09"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-09"
-                  >Demo Nine<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-10.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-10"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-10"
-                  >Demo Ten<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-11.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-11"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-11"
-                  >Demo Eleven<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-12.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-12"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-12"
-                  >Demo Twelve<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-13.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-13"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-13"
-                  >Demo Thirteen<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-14.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-14"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-14"
-                  >Demo Fourteen<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-15.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-15"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-15"
-                  >Demo Fifteen<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/index-16.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-16"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-16"
-                  >Demo Sixteen<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo coming-soon">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/coming-soon.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-02"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-02"
-                  >Coming Soon<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
-                {/* End Single Demo  */}
-                {/* Start Single Demo  */}
-                {/* <div class="col-xl-4 col-md-6 col-12">
-          <div class="single-demo coming-soon">
-            <div class="thumbnail">
-              <img
-                class="w-100"
-                src="assets/images/preview/coming-soon.png"
-                alt="NFT Images"
-              />
-              <a
-                target="_blank"
-                href="https://nuron-nextjs.vercel.app/index-02"
-                class="preview-btn"
-              >
-                <span class="rn-btn">Live Preview</span>
-              </a>
-            </div>
-            <div class="content">
-              <h3 class="title">
-                <a href="https://nuron-nextjs.vercel.app/index-02"
-                  >Coming Soon<i class="feather-arrow-up-right"></i
-                ></a>
-              </h3>
-            </div>
-          </div>
-        </div> */}
                 {/* End Single Demo  */}
               </div>
             </div>
@@ -799,7 +404,7 @@ function App() {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="section-title text-center pb--30">
-                      <span className="subtitle">Our Nuron Feature</span>
+                      {/* <span className="subtitle">Our Unique Feature</span> */}
                       <h2 className="title">Workflow</h2>
                     </div>
                   </div>
@@ -814,11 +419,10 @@ function App() {
                         </div>
                         <div className="content">
                           <h4 className="title">
-                            <a href="#">Perfect Responsive</a>
+                            <a href="#">Bring your data</a>
                           </h4>
                           <p className="description">
-                            Our Template is full Perfect for all device. You can
-                            visit our template all device easily.
+                            Bring your data from any source and upload it to our platform.
                           </p>
                           <a className="read-more-button" href="#"></a>
                         </div>
@@ -836,11 +440,10 @@ function App() {
                         </div>
                         <div className="content">
                           <h4 className="title">
-                            <a href="#">Next JS</a>
+                            <a href="#">OCR Extraction </a>
                           </h4>
                           <p className="description">
-                            Our Template is full Perfect for all device.It is
-                            made by React &amp; Next JS Structure.
+                            Our platform will extract the data from your documents using OCR with the help of SOTA models.
                           </p>
                           <a className="read-more-button" href="#">
                             <i className="feather-arrow-right" />
@@ -860,11 +463,10 @@ function App() {
                         </div>
                         <div className="content">
                           <h4 className="title">
-                            <a href="#">Well Documented Codes</a>
+                            <a href="#">Entity Identification </a>
                           </h4>
                           <p className="description">
-                            The Nuron code is awesome well documented code. And
-                            Its customization is very easily
+                            Identify entities in the extracted data and categorize them accordingly.
                           </p>
                           <a className="read-more-button" href="#">
                             <i className="feather-arrow-right" />
@@ -884,11 +486,10 @@ function App() {
                         </div>
                         <div className="content">
                           <h4 className="title">
-                            <a href="#">Sass Available</a>
+                            <a href="#">Export Structured Data</a>
                           </h4>
                           <p className="description">
-                            The tamplate has Sass available for css. You can
-                            Change css by sass
+                            Export the data in a structured format.
                           </p>
                           <a className="read-more-button" href="#">
                             <i className="feather-arrow-right" />

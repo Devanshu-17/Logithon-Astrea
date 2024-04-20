@@ -30,7 +30,7 @@ export default function Navbar() {
             <Link to="/">
               <a>
                 <span style={{ color: "white", fontSize: "x-large" }}>
-                  LoGiThon
+                Astrea
                 </span>
                 {/* <img src="assets/images/logo/logo.png" alt="Nuron logo" /> */}
               </a>
