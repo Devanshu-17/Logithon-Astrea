@@ -5,45 +5,59 @@ import "./css/upload.css";
 import "./css/App.css";
 import previewBg from "./images/preview/Bug_Loader.gif";
 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 function Upload() {
  const [selectedFile, setSelectedFile] = useState(null);
- const [uploadStatus, setUploadStatus] = useState(''); // Step 1: Add a new state variable
+ const [uploadStatus, setUploadStatus] = useState('');
+ const [fileName, setFileName] = useState('No Files Selected');
+ const navigate = useNavigate(); // Initialize useNavigate
 
  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    setFileName(file ? file.name : 'No Files Selected');
  };
 
  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (!selectedFile) return;
-
-    const formData = new FormData();
-    formData.append('invoice_file', selectedFile);
-
-    try {
-      const response = await fetch('http://localhost:8000/invoice_data', {
-        method: 'POST',
-        body: formData,
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+  event.preventDefault();
+  if (!selectedFile) return;
+ 
+  const formData = new FormData();
+  formData.append('invoice_file', selectedFile);
+ 
+  try {
+     const response = await fetch('http://localhost:8000/invoice_data', {
+       method: 'POST',
+       body: formData,
+     });
+ 
+     if (response.ok) {
+       // Inside handleSubmit function after receiving the response
       try {
         const data = await response.json();
         console.log(data); // Handle the response as needed
-        setUploadStatus('File uploaded successfully!'); // Step 2: Update the uploadStatus
+        setUploadStatus('File uploaded successfully!');
+        // Save the response data to session storage
+        sessionStorage.setItem('uploadData', JSON.stringify(data));
+        // Redirect to the Output page
+        navigate('/output');
       } catch (error) {
         console.error('Error parsing response:', error);
-        setUploadStatus('Error parsing response.'); // Optionally, set an error message
+        setUploadStatus('Error parsing response.');
       }
-    } catch (error) {
-      console.error('Error uploading file:', error);
-      setUploadStatus('Error uploading file.'); // Optionally, set an error message
-    }
- };
 
+     } else {
+       setUploadStatus(`Error uploading file: ${response.statusText}`);
+     }
+  } catch (error) {
+     console.error('Error uploading file:', error);
+     setUploadStatus('Error uploading file.');
+  }
+ };
+ 
+   
  return (
-    <div>
       <body
         class="template-color-1 spybody"
         data-spy="scroll"
@@ -78,20 +92,20 @@ function Upload() {
               className="uploaded-file"
               onChange={handleFileChange}
             />
-            <p className="file-info">No Files Selected</p>
+            <p className="file-info">{fileName}</p>
           </div>
           <div className="dropzone-actions">
             <button type="reset">Cancel</button>
             <button id="submit-button" type="submit">Save</button>
           </div>
         </form>
-
-        {/* Step 3: Display the uploadStatus */}
-        {uploadStatus && <p className="upload-status">{uploadStatus}</p>}
-
+        {uploadStatus && (
+          <div className="upload-status">
+            <p>{uploadStatus}</p>
+          </div>
+        )}
         <Footer />
       </body>
-    </div>
  );
 }
 
