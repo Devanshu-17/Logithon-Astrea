@@ -96,7 +96,7 @@ function Upload() {
           </div>
           <div className="dropzone-actions">
             <button type="reset">Cancel</button>
-            <button id="submit-button" type="submit">Save</button>
+            <button id="submit-button" type="submit">Submit</button>
           </div>
         </form>
         {uploadStatus && (

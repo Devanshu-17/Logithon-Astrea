@@ -60,7 +60,7 @@ async def process_invoice_data(invoice_file: UploadFile = File(...)):
             {"role": "system", "content": prompt},
             {"role": "user", "content": "error_message: Not able to create, ocr_text:" + ocr_text},
         ],
-        model="llama3-8b-8192",
+        model="mixtral-8x7b-32768", #llama3-70b-8192
     )
     response_content = response.choices[0].message.content
     print("Response Content:", response_content)  # Print response_content for debugging
@@ -86,7 +86,7 @@ async def process_invoice_data(invoice_file: UploadFile = File(...)):
             {"role": "system", "content": prompt},
             {"role": "user", "content": f"error_message:Not able to create, ocr_text:{ocr_text}, entities:{entities}"}
         ],
-        model="llama3-8b-8192",
+        model="mixtral-8x7b-32768",
     )
     response_content = chat_completion.choices[0].message.content
     print("Response Content:", response_content)

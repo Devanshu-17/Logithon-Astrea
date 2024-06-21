@@ -172,7 +172,7 @@ function App() {
                   <div className="col-lg-12">
                     <div className="inner-content">
                       <h1 className="title mt--60">
-                      Astral Extraction
+                      Astral Extraction:
                         <br />
                         Doc Parsing                          Made Simple
                           <br />
